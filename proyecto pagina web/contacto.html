@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Contacto - Barbería Alura</title>
+        <link rel="stylesheet" href="reset.css"> <!-- lo ponemos antes del otro link para que no borre los parametros que pusimos, nos ayuda a que todo eso sobre el css(bordes, etc) que estan por defecto se vean mejor -->
+        <link rel="stylesheet" href="style.css">
+
+     </head>
+    <body>
+
+        <header>
+            <div class="caja"> <!-- etiqueta para crear bloques -->
+                <h1> <img src="imagenes/logo.png" alt="Logo de la barbería alura"> </h1> <!-- se pone en h1 aunque no es titulo se le quiere de esa importancia -->
+                    <nav> <!-- para colocar el panel de navegación -->  
+                        <ul>
+
+                            <li><a href="barber.html">Home</a></li>  <!-- la etiqueta <a> de anacora es para vincular paginas a una -->
+                            <li><a href="productos.html">Productos</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+
+                        </ul>
+                    </nav>
+            </div>
+        </header>
+        <main>
+            <form>
+                        <label for="nombreapellido">Nombre y Apellido</label> <!-- label es una etiqueta, el input y el label siempre van juntos -->
+                        <input type="text" id="nombreapellido" class="input-padron" required>  <!-- una caja para que el usuario ingrese sus datos -->
+                        
+                        <label for="correoelectronico">Correo Electrónico</label>
+                        <input type="email" id="correoelectronico" class="input-padron" required placeholder="email@dominio.com">
+
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" class="input-padron" required placeholder="(XX) XXXX XXXX">  <!-- tel, abrebiatura por si la pagina se abre en celular -->
+
+                        <label for="mensaje">Mensaje</label>
+                        <textarea cols="70" rows="10" id="mensaje" class="input-padron" required></textarea> <!-- cols=columnas rows de filas -->
+
+            <!-- se pone un div por que ya notamos que se puede separar por bloques -->
+            
+            <fieldset> <!-- todos los items del grupo estan hablando de la misma cosa -->
+          
+                        <p>¿Cómo le gustaría que le contactemos?</p>
+
+                        <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label> <!-- cuando usamos radio se usa value -->
+                        <!-- name para que solo una bolita se pueda seleccionar -->
+
+                        <label for="radio-teléfono"><input type="radio" name="contacto"  value="telefono" id="radio-telefono">Teléfono</label>
+
+
+                        <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp"checked>Whatsapp</label>
+
+            </fieldset> 
+
+            <fieldset>
+                        <legend>¿En cuál horario prefiere ser atendido?</legend>
+
+                        <select>
+                            <option>Mañana</option>  <!-- option es para crear los items seleccionables de select -->
+                            <option>Tarde</option>
+                            <option>Noche</option>
+
+                        </select>
+            </fieldset>
+
+               <label class="checkbox"><input type="checkbox" checked>¿Le gustaría recibir novedades de la barbería Alura?</label> <!-- no se necesita el id -->
+
+                <input type="submit" value="Enviar Formulario" class="enviar">  <!-- botón para enviar los datos -->
+
+            </form>
+
+            <table>  <!-- construir tablas -->
+                <thead>
+                <tr> <!-- tr es para filas -->
+                    <th>Día</th>
+
+                    <th>Horario</th> <!-- td es para columnas -->
+                </tr>
+                </thead>
+
+                <tbody> 
+                    <tr>
+                        <td>Lunes</td>
+    
+                        <td>08h - 20h</td>
+                    </tr>
+    
+                    <tr>
+                        <td>Miércoles</td>
+    
+                        <td>08h - 20h</td>
+                    </tr>
+    
+                    <tr>
+                        <td>Viernes</td>
+    
+                        <td>08h - 20h</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </main>
+
+        <footer> <!-- pie de página -->
+
+            <img src="imagenes/logo-blanco.png">
+            <p class="Copyright">&copy Copyright Barbería Alura - 2023</p>
+
+        </footer>
+    </body>
+
+
+
+
+</html>
